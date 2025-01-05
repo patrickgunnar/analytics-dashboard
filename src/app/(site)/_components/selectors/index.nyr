@@ -1,0 +1,89 @@
+Construct Module("selectors") Extending("appLayout") {
+    Declare Class("section") {
+        Stylesheet({
+            display: "flex",
+            gap: "20px",
+            justify: "center",
+            align: "flex-start",
+            flexWrap: "wrap",
+            m: "40px auto",
+            wd: "80%"
+        })
+    },
+    Declare Class("selectBox") {
+        Stylesheet({
+            bgdColor: "white",
+            display: "flex",
+            flexDir: "column",
+            justify: "flex-start",
+            align: "center",
+            br: "22px",
+            border: "1px solid lightgray",
+            shadow: "0 0 1px rgba(0, 0, 0, 0.25)",
+            wd: "400px",
+            pos: "relative",
+            overflow: "hidden",
+            userSelect: "none",
+        })
+    },
+    Declare Class("button") {
+        Stylesheet({
+            bgdColor: "transparent",
+            boxSizing: "border-box",
+            display: "flex",
+            align: "center",
+            border: "none",
+            txtSize: "16px",
+            cursor: "pointer",
+            p: "5px 15px",
+            wd: "100%"
+        }),
+        Hover({
+            bgdColor: "${transparencyGray}"
+        })
+    },
+    Declare Class("selectBtn") Deriving("button") {
+        Stylesheet({
+            justify: "space-between",
+            hr: "50px",
+        })
+    },
+    Declare Class("selectList") {
+        Stylesheet({
+            display: "flex",
+            gap: "5px",
+            flexDir: "column",
+            borderTop: "1px solid lightgray",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            m: "0px auto",
+            wd: "90%",
+        })
+    },
+    Declare Class("selectItem") {
+        Stylesheet({
+            wd: "100%"
+        })
+    },
+    Declare Class("itemBtn") Deriving("button") {
+        Stylesheet({
+            br: "12px",
+            hr: "40px"
+        })
+    },
+    Declare Class("bold") {
+        Stylesheet({
+            bold: "700"
+        })
+    },
+    Declare Class("active") Deriving("bold") {
+        Stylesheet({
+            bgdColor: "${transparencyGray}"
+        })
+    },
+    Declare Class("icon") {
+        Stylesheet({
+            txtSize: "19px",
+        })
+    }
+}

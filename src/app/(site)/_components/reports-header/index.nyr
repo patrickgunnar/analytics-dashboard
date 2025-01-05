@@ -1,0 +1,18 @@
+Construct Module("reportsHeader") {
+    Declare Class("container") {
+        Stylesheet({
+            display: "flex",
+            justify: "space-between",
+            align: "center",
+            borderBottom: "1px solid lightgray",
+            m: "20px auto",
+            p: "20px 0px"
+        })
+    },
+    Declare Class("header") {
+        Stylesheet({
+            bold: "700",
+            txtSize: "20px",
+        })
+    },
+}

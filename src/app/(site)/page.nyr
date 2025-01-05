@@ -1,1 +1,14 @@
-Construct Module("mainPageComponent") {}
+Construct Module("mainPage") {
+    Declare Class("main") {
+        Stylesheet({
+            p: "0px",
+        }),
+        PanoramicViewer({
+            LargeScreen({
+                Stylesheet({
+                    p: "20px"
+                })
+            })
+        })
+    }
+}

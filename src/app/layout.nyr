@@ -1,6 +1,7 @@
 Construct Layout("appLayout") {
     Declare Variables({
-        backgroundClr: "hsl(0, 0%, 96%)"
+        backgroundClr: "hsl(0, 0%, 96%)",
+        transparencyGray: "rgba(189, 195, 199, 0.3)"
     }),
     Declare Class("body") {
         Stylesheet({
