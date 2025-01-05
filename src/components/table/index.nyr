@@ -1,0 +1,20 @@
+Construct Module("table") {
+    Declare Class("table") {
+        Stylesheet({
+            boxSizing: "border-box",
+            p: "20px",
+            overflow: "hidden",
+            overflowY: "auto",
+        })
+    },
+    Declare Class("onSidebar") Deriving("table") {
+        Stylesheet({
+            wd: "calc(100% - 15rem)"
+        })
+    },
+    Declare Class("noSidebar") Deriving("table") {
+        Stylesheet({
+            wd: "calc(100% - 70px)"
+        })
+    },
+}

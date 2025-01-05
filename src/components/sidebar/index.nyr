@@ -1,0 +1,94 @@
+Construct Module("sidebar") {
+    Declare Class("sidebar") {
+        Stylesheet({
+            display: "flex",
+            flexDir: "column",
+            justify: "space-between",
+            boxSizing: "border-box",
+            br: "0 20px 20px 0",
+            bgdColor: "white",
+            p: "10px",
+            hr: "auto",
+            flexGrow: "1",
+            pos: "relative"
+        }),
+    },
+    Declare Class("onCollapse") Deriving("sidebar") {
+        Stylesheet({
+            wd: "70px"
+        })
+    },
+    Declare Class("onExpand") Deriving("sidebar") {
+        Stylesheet({
+            wd: "15rem"
+        })
+    },
+    Declare Class("logo") Deriving("flexCenterBox") {
+        Stylesheet({
+            color: "#E51837",
+            txtFont: "'Tesla'",
+            txtSize: "25px",
+            marginTop: "28px",
+            marginBottom: "38px",
+            wd: "100%"
+        })
+    },
+    Declare Class("optionsContainer") {
+        Stylesheet({
+            display: "flex",
+            gap: "10px",
+            flexDir: "column",
+        })
+    },
+    Declare Class("supportContainer") {
+        Stylesheet({
+            display: "flex",
+            flexDir: "column",
+            gap: "5px",
+            m: "60px auto"
+        })
+    },
+    Declare Class("supportLabel") {
+        Stylesheet({
+            txtSize: "14px",
+            bold: "600",
+            m: "0px 20px",
+            p: "10px"
+        })
+    },
+    Declare Class("userContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            borderTop: "1px solid lightgray",
+            flexDir: "column",
+            m: "60px auto",
+            p: "30px 0px",
+            marginBottom: "20px",
+            wd: "100%",
+        })
+    },
+    Declare Class("userIcon") {
+        Stylesheet({
+            txtSize: "25px"
+        })
+    },
+    Declare Class("userInfo") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "5px",
+            flexDir: "column",
+            txtSize: "16px",
+            textAlign: "center",
+            m: "20px auto",
+            marginBottom: "0px"
+        })
+    },
+    Declare Class("username") {
+        Stylesheet({
+            bold: "600"
+        })
+    },
+    Declare Class("userEmail") {
+        Stylesheet({
+            color: "gray"
+        })
+    }
+}

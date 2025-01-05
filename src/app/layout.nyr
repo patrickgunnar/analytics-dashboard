@@ -1,0 +1,17 @@
+Construct Layout("appLayout") {
+    Declare Variables({
+        backgroundClr: "hsl(0, 0%, 96%)"
+    }),
+    Declare Class("body") {
+        Stylesheet({
+            display: "flex",
+            bgdColor: "${backgroundClr}",
+            txtFont: "'Poppins', sans-serif",
+            minHr: "100vh",
+            hr: "auto",
+            wd: "100vw",
+            overflow: "hidden",
+            overflowY: "auto"
+        })
+    }
+}

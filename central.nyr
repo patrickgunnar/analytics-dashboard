@@ -1,0 +1,83 @@
+Construct Central {
+    Declare Imports([
+        Import("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"),
+    ]),
+    Declare Typefaces({
+        DrunkenHour: "/fonts/drunken hour/DrunkenHour.otf",
+        Tesla: "/fonts/tesla/TESLA.ttf",
+    }),
+    Declare Breakpoints({
+        MobileFirst({
+            SmallScreen: "640px",
+            MediumScreen: "768px",
+            LargeScreen: "1024px",
+            ExtraLargeScreen: "1280px",
+            UltraLargeScreen: "1536px"
+        })
+    }),
+    Declare Aliases({
+        bgd: background,
+        bgdImage: backgroundImage,
+        bgdColor: backgroundColor,
+        bgdPos: backgroundPosition,
+        bgdRpt: backgroundRepeat,
+        bgdSize: backgroundSize,
+        txtFont: fontFamily,
+        txtSize: fontSize,
+        bold: fontWeight,
+        txtShadow: textShadow,
+        pos: position,
+        hr: height,
+        minHr: minHeight,
+        wd: width,
+        p: padding,
+        br: borderRadius,
+        flexDir: flexDirection,
+        align: alignItems,
+        justify: justifyContent,
+        shadow: boxShadow,
+        m: margin,
+        z: zIndex,
+    }),
+    Declare Class("unstyledLink") {
+        Stylesheet({
+            textDecoration: "none",
+            color: "inherit",
+            background: "none",
+            border: "none",
+            outline: "none",
+        }),
+        Hover({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Active({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Visited({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Focus({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        })
+    },
+    Declare Class("borderBox") {
+        Stylesheet({
+            boxSizing: "border-box",
+        })
+    },
+    Declare Class("flexCenterBox") Deriving("borderBox") {
+        Stylesheet({
+            display: "flex",
+            align: "center",
+            justify: "center",
+        })
+    },
+}

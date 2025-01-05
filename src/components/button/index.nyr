@@ -1,0 +1,54 @@
+Construct Module("button") {
+    Declare Variables({
+        backgroundClr: "rgba(0, 150, 255, 0.1)"
+    }),
+    Declare Class("btn") {
+        Stylesheet({
+            boxSizing: "border-box",
+            display: "flex",
+            align: "center",
+            gap: "20px",
+            bgdColor: "transparent",
+            border: "none",
+            cursor: "pointer",
+            br: "12px",
+            hr: "50px",
+            wd: "100%"
+        }),
+        Hover({
+            bgdColor: "${backgroundClr}"
+        })
+    },
+    Declare Class("justifyStart") {
+        Stylesheet({
+            justify: "flex-start",
+            p: "5px 20px",
+        })
+    },
+    Declare Class("justifyCenter") {
+        Stylesheet({
+            justify: "center",
+        })
+    },
+    Declare Class("iconCollapsed") {
+        Stylesheet({
+            txtSize: "22px"
+        })
+    },
+    Declare Class("iconExpand") {
+        Stylesheet({
+            txtSize: "18px"
+        })
+    },
+    Declare Class("label") {
+        Stylesheet({
+            txtSize: "16px"
+        })
+    },
+    Declare Class("active") {
+        Stylesheet({
+            bgdColor: "${backgroundClr}",
+            color: "blue"
+        })
+    },
+}
