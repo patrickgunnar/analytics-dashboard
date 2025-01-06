@@ -10,5 +10,10 @@ Construct Module("mainPage") {
                 })
             })
         })
+    },
+    Declare Class("topicCards") Deriving("flexCenterBox") {
+        Stylesheet({
+            flexWrap: "wrap"
+        })
     }
 }
