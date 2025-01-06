@@ -1,0 +1,137 @@
+Construct Module("leaderboard") {
+    Declare Class("section") {
+        Stylesheet({
+            boxSizing: "border-box",
+            bgdColor: "white",
+            display: "flex",
+            flexDir: "column",
+            justify: "center",
+            align: "flex-start",
+            br: "22px",
+            border: "1px solid lightgray",
+            shadow: "0 0 10px rgba(0, 0, 0, 0.15)",
+            p: "20px",
+            m: "20px 0px",
+            wd: "100%",
+            pos: "relative",
+            overflow: "hidden",
+            userSelect: "none",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    wd: "600px",
+                    m: "20px",
+                })
+            })
+        })
+    },
+    Declare Class("title") {
+        Stylesheet({
+            color: "gray",
+            bold: "700",
+            txtSize: "18px",
+            marginBottom: "20px"
+        })
+    },
+    Declare Class("list") {
+        Stylesheet({
+            wd: "100%"
+        })
+    },
+    Declare Class("item") {
+        Stylesheet({
+            display: "flex",
+            justify: "space-between",
+            align: "center",
+            m: "10px 0px",
+            wd: "100%"
+        })
+    },
+    Declare Class("icon") {
+        Stylesheet({
+            txtSize: "35px",
+            hr: "40px",
+            wd: "40px"
+        })
+    },
+    Declare Class("itemBox") {
+        Stylesheet({
+            wd: "calc(100% - 140px)"
+        })
+    },
+    Declare Class("itemBox") {
+        Stylesheet({
+            wd: "calc(100% - 100px)"
+        })
+    },
+    Declare Class("itemTitle") {
+        Stylesheet({
+            color: "black",
+            bold: "700",
+            txtSize: "16px",
+            m: "5px",
+            wd: "100%"
+        })
+    },
+    Declare Class("itemLabel") {
+        Stylesheet({
+            color: "gray",
+            txtSize: "14px",
+            m: "5px",
+            wd: "100%"
+        })
+    },
+    Declare Class("scoreBox") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "10px"
+        })
+    },
+    Declare Class("idx") {
+        Stylesheet({
+            bold: "700"
+        })
+    },
+    Declare Class("score") {
+        Stylesheet({
+            txtSize: "20px",
+            hr: "20px",
+            wd: "20px"
+        })
+    },
+    Declare Class("high") {
+        Stylesheet({
+            color: "#00FF00"
+        })
+    },
+    Declare Class("down") {
+        Stylesheet({
+            color: "red"
+        })
+    },
+    Declare Class("linkContainer") {
+        Stylesheet({
+            borderTop: "1px solid lightgray",
+            marginTop: "10px",
+            paddingTop: "18px",
+            wd: "100%"
+        }),
+    },
+    Declare Class("link") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "6px",
+            bold: "700",
+            textAlign: "center",
+            color: "#1a73e8",
+        }),
+        Hover({
+            color: "#0000EE",
+        }),
+        Visited({
+            color: "#6a0dad"
+        }),
+        Active({
+            color: "#ff4500"
+        })
+    }
+}
