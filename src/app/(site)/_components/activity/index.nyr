@@ -1,0 +1,317 @@
+Construct Module("activity") {
+    Declare Class("section") {
+        Stylesheet({
+            boxSizing: "border-box",
+            bgdColor: "white",
+            display: "flex",
+            flexDir: "column",
+            justify: "center",
+            align: "flex-start",
+            br: "22px",
+            border: "1px solid lightgray",
+            shadow: "0 0 10px rgba(0, 0, 0, 0.15)",
+            p: "10px",
+            m: "10px 0px",
+            wd: "100%",
+            pos: "relative",
+            overflow: "hidden",
+            userSelect: "none",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    p: "20px",
+                    m: "20px 0px",
+                    wd: "94%",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    m: "20px",
+                    wd: "1250px",
+                })
+            })
+        })
+    },
+    Declare Class("titleBox") {
+        Stylesheet({
+            display: "flex",
+            justify: "space-between",
+            align: "center",
+            p: "10px 0px",
+            wd: "100%"
+        })
+    },
+    Declare Class("title") {
+        Stylesheet({
+            color: "gray",
+            bold: "700",
+            txtSize: "12px",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "14px"
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    txtSize: "16px"
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    txtSize: "18px"
+                })
+            })
+        })
+    },
+    Declare Class("link") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "6px",
+            bold: "700",
+            txtSize: "12px",
+            textAlign: "center",
+            color: "#1a73e8",
+        }),
+        Hover({
+            color: "#0000EE",
+        }),
+        Visited({
+            color: "#6a0dad"
+        }),
+        Active({
+            color: "#ff4500"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "14px"
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    txtSize: "16px"
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    txtSize: "18px"
+                })
+            })
+        })
+    },
+    Declare Class("icon") {
+        Stylesheet({
+            txtSize: "12px"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "14px"
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    txtSize: "16px"
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    txtSize: "18px"
+                })
+            })
+        })
+    },
+    Declare Class("chartBox") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "0px",
+            borderTop: "1px solid lightgray",
+            p: "5px",
+            hr: "200px",
+            wd: "100%",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    p: "10px",
+                    hr: "300px",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    gap: "10px",
+                    p: "10px",
+                    hr: "500px",
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    gap: "20px",
+                    p: "20px",
+                })
+            })
+        })
+    },
+    Declare Class("spaceBetween") {
+        Stylesheet({
+            display: "flex",
+            justify: "space-between",
+            align: "center",
+        })
+    },
+    Declare Class("sidebar") Deriving("spaceBetween") {
+        Stylesheet({
+            flexDir: "column",
+            hr: "calc(100% - 40px)",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    hr: "calc(100% - 60px)",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    hr: "calc(100% - 80px)",
+                    wd: "40px"
+                })
+            })
+        })
+    },
+    Declare Class("sidebarItem") Deriving("flexCenterBox") {
+        Stylesheet({
+            bold: "700",
+            color: "gray",
+            txtSize: "12px",
+            wd: "100%"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "14px",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    txtSize: "16px",
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    txtSize: "18px"
+                })
+            })
+        })
+    },
+    Declare Class("chart") Deriving("spaceBetween") {
+        Stylesheet({
+            flexDir: "row",
+            marginTop: "25px",
+            hr: "90%",
+            wd: "calc(100% - 10px)"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    wd: "calc(100% - 20px)"
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    wd: "calc(100% - 40px)"
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    wd: "calc(100% - 60px)"
+                })
+            })
+        })
+    },
+    Declare Class("chartItem") Deriving("spaceBetween") {
+        Stylesheet({
+            gap: "10px",
+            flexDir: "column",
+            m: "0px",
+            hr: "100%",
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    m: "0px 5px",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    m: "0px 8px",
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    m: "0px 10px"
+                })
+            })
+        })
+    },
+    Declare Class("barBox") {
+        Stylesheet({
+            bgdColor: "lightgray",
+            pos: "relative",
+            br: "20px",
+            display: "flex",
+            flexDir: "column",
+            gap: "20px",
+            justify: "flex-end",
+            align: "center",
+            hr: "calc(100% - 28px)",
+            wd: "3px",
+            overflow: "hidden"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    wd: "6px",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    wd: "8px",
+                })
+            }),
+            ExtraLargeScreen({
+                Stylesheet({
+                    wd: "10px"
+                })
+            })
+        })
+    },
+    Declare Class("bar") {
+        Stylesheet({
+            bgdColor: "#1a73e8",
+            br: "20px",
+            wd: "100%"
+        })
+    },
+    Declare Class("label") Deriving("flexCenterBox") {
+        Stylesheet({
+            color: "gray",
+            bold: "700",
+            txtSize: "10px",
+            hr: "18px",
+            wd: "100%"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "12px",
+                })
+            }),
+            LargeScreen({
+                Stylesheet({
+                    txtSize: "14px",
+                })
+            })
+        })
+    },
+}

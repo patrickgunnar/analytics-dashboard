@@ -1,3 +1,4 @@
+import Activity from "./_components/activity";
 import Leaderboard, { LeaderboardItem } from "./_components/leaderboard";
 import ReportsHeader from "./_components/reports-header";
 import Selectors from "./_components/selectors";
@@ -158,6 +159,9 @@ export default function Home() {
         <main className="@module:mainPage::main">
             <ReportsHeader />
             <Selectors />
+            <div className="@module:mainPage::topicCards">
+                <Activity />
+            </div>
             <div className="@module:mainPage::topicCards">
                 <TopicCard
                     title="Weakest Topics"
