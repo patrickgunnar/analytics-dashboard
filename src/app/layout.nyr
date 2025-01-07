@@ -10,9 +10,16 @@ Construct Layout("appLayout") {
             txtFont: "'Poppins', sans-serif",
             minHr: "100vh",
             hr: "auto",
-            wd: "100vw",
+            wd: "125vw",
             overflow: "hidden",
             overflowY: "auto"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    wd: "100vw",
+                })
+            })
         })
     }
 }
