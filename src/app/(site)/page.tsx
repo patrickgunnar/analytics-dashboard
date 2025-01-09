@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Activity from "./_components/activity";
 import Leaderboard, { LeaderboardItem } from "./_components/leaderboard";
 import ReportsHeader from "./_components/reports-header";
@@ -185,6 +186,20 @@ export default function Home() {
                     items={groupsLeaderboard}
                 />
             </div>
+            <footer className="@module:mainPage::footer">
+                <span>Styled with</span>
+                <div className="@module:mainPage::logo">
+                    <span>Galadriel</span>
+                    <Image
+                        src="/img/Galadriel CSS Logo.png"
+                        alt="Galadriel CSS Logo"
+                        className="@module:mainPage::logoImage"
+                        height={100}
+                        width={100}
+                    />
+                    <span>CSS</span>
+                </div>
+            </footer>
         </main>
     );
 }

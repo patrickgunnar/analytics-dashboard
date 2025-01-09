@@ -1,4 +1,4 @@
-Construct Module("mainPage") {
+Construct Module("mainPage") Extending("appLayout") {
     Declare Class("main") {
         Stylesheet({
             p: "0px",
@@ -15,5 +15,50 @@ Construct Module("mainPage") {
         Stylesheet({
             flexWrap: "wrap"
         })
-    }
+    },
+    Declare Class("footer") Deriving("secondaryBackground") {
+        Stylesheet({
+            boxSizing: "border-box",
+            br: "20px",
+            border: "1px solid lightgray",
+            shadow: "0 0 10px ${transparencyBlack}",
+            marginTop: "80px",
+            marginBottom: "20px",
+            p: "100px 20px",
+            wd: "100%"
+        })
+    },
+    Declare Class("logo") Deriving("flexCenterBox") {
+        Stylesheet({
+            txtFont: "'DrunkenHour'",
+            txtSize: "30px",
+            bold: "normal"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    txtSize: "45px"
+                })
+            })
+        })
+    },
+    Declare Class("logoImage") {
+        Important(true),
+        Stylesheet({
+            filter: "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2))",
+            left: "10px",
+            pos: "relative",
+            hr: "66px",
+            wd: "66px"
+        }),
+        PanoramicViewer({
+            SmallScreen({
+                Stylesheet({
+                    left: "15px",
+                    hr: "100px",
+                    wd: "100px"
+                })
+            })
+        })
+    },
 }
